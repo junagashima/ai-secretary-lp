@@ -105,6 +105,18 @@ body {
     margin: 0 auto;
 }
 
+.hero-hook {
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 24px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
 .hero-title {
     font-size: 48px;
     font-weight: bold;
@@ -146,10 +158,11 @@ body {
 
 .stat-value {
     display: block;
-    font-size: 36px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--accent-color);
     margin-bottom: 8px;
+    line-height: 1.2;
 }
 
 .stat-desc {
@@ -812,6 +825,11 @@ body {
 @media (max-width: 768px) {
     .nav {
         display: none;
+    }
+
+    .hero-hook {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 
     .hero-title {
