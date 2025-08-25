@@ -258,6 +258,57 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
+/* チャレンジセクション特別スタイル */
+.challenge {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.challenge-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.challenge-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.challenge-content h4 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 1.2;
+    position: relative;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.challenge-image {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.challenge-image:hover img {
+    transform: scale(1.02);
+}
+
 .reasons-hero {
     position: relative;
     display: flex;
@@ -1698,6 +1749,19 @@ body {
     }
     
     .reasons-image {
+        max-width: 350px;
+    }
+    
+    .challenge-hero {
+        gap: 25px;
+        margin: 40px 0;
+    }
+
+    .challenge-content h4 {
+        font-size: 24px;
+    }
+    
+    .challenge-image {
         max-width: 350px;
     }
 
