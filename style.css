@@ -93,11 +93,14 @@ body {
 
 /* ヒーローセクション */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: 
+        linear-gradient(135deg, rgba(37, 99, 235, 0.85), rgba(30, 64, 175, 0.85)),
+        url('/images/hero-background.jpg') center center/cover no-repeat;
     color: var(--white);
     padding: 100px 0 120px;
     text-align: center;
     position: relative;
+    min-height: 80vh;
 }
 
 .hero-content {
@@ -1560,5 +1563,12 @@ body {
 
     .notes-title {
         font-size: 18px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 80px 0 100px;
+        background-position: center center;
+        background-attachment: scroll;
     }
 }
