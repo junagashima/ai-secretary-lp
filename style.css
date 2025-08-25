@@ -117,6 +117,77 @@ body {
     backdrop-filter: blur(10px);
 }
 
+/* プロセスフロー */
+.how-it-works {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.how-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--white);
+}
+
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 24px;
+    border-radius: 16px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.step-number {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.step-content h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.step-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.process-arrow {
+    font-size: 24px;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
 .hero-title {
     font-size: 48px;
     font-weight: bold;
@@ -897,6 +968,30 @@ body {
     .hero-hook {
         font-size: 16px;
         padding: 10px 20px;
+    }
+
+    .how-it-works {
+        padding: 24px;
+        margin: 24px 0;
+    }
+
+    .how-title {
+        font-size: 20px;
+    }
+
+    .process-flow {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .process-step {
+        min-width: auto;
+        max-width: none;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        margin: -8px 0;
     }
 
     .hero-title {
