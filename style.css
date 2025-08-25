@@ -121,19 +121,19 @@ body {
     color: var(--accent-color);
 }
 
-/* サービス名セクション - プレミアムデザイン */
+/* サービス名セクション - 透過ガラスモーフィズムデザイン */
 .service-name {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
-    backdrop-filter: blur(15px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 28px;
     padding: 48px;
     margin: 48px 0 32px 0;
     position: relative;
     box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.12),
-        0 12px 24px rgba(0, 0, 0, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+        0 8px 32px rgba(31, 38, 135, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     text-align: center;
     max-width: 850px;
     margin-left: auto;
@@ -189,41 +189,45 @@ body {
 
 .service-title {
     margin: 0;
-    color: #0f172a;
+    color: var(--white);
     line-height: 1.1;
     margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .service-main {
     display: block;
     font-size: 52px;
     font-weight: 900;
-    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 60%, #ec4899 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 60%, #dbeafe 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: -0.025em;
     margin-bottom: 8px;
-    text-shadow: 0 0 30px rgba(30, 64, 175, 0.1);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .service-sub {
     display: block;
     font-size: 36px;
     font-weight: 700;
-    color: #334155;
+    color: var(--white);
     letter-spacing: 0.01em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .service-tagline {
     font-size: 20px;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.9);
     margin: 28px 0 36px 0;
     font-weight: 500;
     line-height: 1.6;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .service-features {
@@ -235,23 +239,24 @@ body {
 }
 
 .feature-tag {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 51, 234, 0.08) 100%);
-    color: #1e40af;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    color: var(--white);
     padding: 14px 24px;
     border-radius: 50px;
     font-size: 15px;
     font-weight: 600;
-    border: 1px solid rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .feature-tag:hover {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(147, 51, 234, 0.12) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(59, 130, 246, 0.15);
-    border-color: rgba(59, 130, 246, 0.25);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* 質問セクション - 元のLPデザインルール適用 */
