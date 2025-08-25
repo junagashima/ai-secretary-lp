@@ -95,8 +95,9 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
-    padding: 100px 0;
+    padding: 100px 0 120px;
     text-align: center;
+    position: relative;
 }
 
 .hero-content {
@@ -124,10 +125,45 @@ body {
     margin-bottom: 40px;
 }
 
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin: 40px 0;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-value {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+.stat-desc {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
 .hero-buttons {
     display: flex;
     gap: 16px;
     justify-content: center;
+    margin-top: 40px;
 }
 
 /* ボタン */
@@ -784,6 +820,25 @@ body {
 
     .hero-subtitle {
         font-size: 18px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .hero-stat {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-stat:last-child {
+        border-bottom: none;
+    }
+
+    .stat-value {
+        font-size: 28px;
     }
 
     .hero-buttons {
