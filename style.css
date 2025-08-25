@@ -268,6 +268,104 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
+/* ご相談までの流れセクション */
+.consultation-flow {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    padding: 80px 0;
+}
+
+.consultation-flow .section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 60px;
+}
+
+.flow-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.flow-step {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px;
+    gap: 30px;
+    align-items: center;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.flow-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.step-content h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.step-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.step-icon {
+    font-size: 36px;
+    text-align: center;
+}
+
+.flow-arrow {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.flow-arrow span {
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.flow-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(59, 130, 246, 0.05));
+    border-radius: 20px;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.flow-cta-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
 /* 講師紹介セクション特別スタイル */
 .instructor {
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
@@ -2044,6 +2142,34 @@ body {
         right: 15px;
         padding: 12px 20px;
         font-size: 14px;
+    }
+    
+    .consultation-flow {
+        padding: 60px 0;
+    }
+    
+    .flow-step {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .step-content h4 {
+        font-size: 20px;
+    }
+    
+    .step-content p {
+        font-size: 14px;
+    }
+    
+    .flow-cta {
+        margin-top: 40px;
+        padding: 30px 20px;
+    }
+    
+    .flow-cta-text {
+        font-size: 18px;
     }
 
     .ai-effects-content .question-subtitle {
