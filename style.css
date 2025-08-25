@@ -174,26 +174,28 @@ body {
 
 .service-main {
     display: block;
-    font-size: 52px;
+    font-size: 64px;
     font-weight: 900;
     color: var(--white);
-    letter-spacing: -0.025em;
-    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
     text-shadow: 
-        0 4px 12px rgba(0, 0, 0, 0.8),
-        0 2px 4px rgba(0, 0, 0, 0.6),
+        0 4px 16px rgba(0, 0, 0, 0.8),
+        0 2px 6px rgba(0, 0, 0, 0.6),
         2px 2px 0px rgba(0, 0, 0, 0.4);
+    line-height: 1.1;
 }
 
 .service-sub {
     display: block;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 700;
-    color: var(--white);
+    color: var(--accent-color);
     letter-spacing: 0.01em;
     text-shadow: 
-        0 3px 8px rgba(0, 0, 0, 0.8),
-        0 1px 3px rgba(0, 0, 0, 0.6);
+        0 3px 12px rgba(0, 0, 0, 0.8),
+        0 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
 }
 
 .service-tagline {
@@ -1344,12 +1346,12 @@ body {
     }
 
     .service-main {
-        font-size: 38px;
+        font-size: 42px;
         line-height: 1.1;
     }
 
     .service-sub {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .service-tagline {
