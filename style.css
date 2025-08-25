@@ -331,7 +331,7 @@ body {
 .reason-item {
     display: flex;
     gap: 32px;
-    background: var(--white);
+    background: #ffffff !important;
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
@@ -363,14 +363,14 @@ body {
 .reason-content h4 {
     font-size: 22px;
     font-weight: 700;
-    color: var(--text-color);
+    color: #1f2937 !important;
     margin-bottom: 16px;
     line-height: 1.4;
 }
 
 .reason-content p {
     font-size: 16px;
-    color: var(--text-light);
+    color: #6b7280 !important;
     line-height: 1.7;
     margin: 0;
 }
