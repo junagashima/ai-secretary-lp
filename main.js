@@ -1,5 +1,73 @@
-// 追尾CTAの表示制御
+// ハンバーガーメニューとCTAの制御
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // ハンバーガーメニューの初期化
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    // メニュー開閉の処理
+    function toggleMobileMenu() {
+        mobileMenuToggle.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        
+        // body のスクロールを制御
+        if (mobileMenuOverlay.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // メニューを閉じる処理
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // イベントリスナーの設定
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+    
+    // モバイルメニューリンクのクリック処理
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            // メニューを閉じる
+            closeMobileMenu();
+            
+            // スムーズスクロール
+            if (targetElement) {
+                setTimeout(() => {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300); // メニューが閉じるアニメーションを待つ
+            }
+        });
+    });
+    
+    // オーバーレイクリックで閉じる
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                closeMobileMenu();
+            }
+        });
+    }
+    
+    // ESCキーで閉じる
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
     const floatingCta = document.getElementById('floatingCta');
     const heroSection = document.querySelector('.hero');
     const ctaSection = document.getElementById('contact');
