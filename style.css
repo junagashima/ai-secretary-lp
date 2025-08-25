@@ -256,8 +256,8 @@ body {
 .ai-effects-hero {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 40px;
+    grid-template-columns: 1fr 380px;
+    gap: 50px;
     align-items: center;
     margin-bottom: 60px;
     min-height: 400px;
@@ -283,11 +283,16 @@ body {
     font-size: 18px;
     line-height: 1.7;
     position: relative;
+    color: #6b7280;
 }
 
 .ai-effects-image {
     position: relative;
     z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 }
 
 .ai-effects-image img {
@@ -295,47 +300,45 @@ body {
     height: auto;
     display: block;
     transition: all 0.3s ease;
-    /* 背景透過効果 */
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
-    /* 人物を際立たせる */
-    mix-blend-mode: multiply;
+    /* 自然な表示 */
+    filter: brightness(1.02) contrast(1.05);
     border-radius: 20px;
 }
 
 .ai-effects-image:hover img {
-    transform: scale(1.05) translateX(-10px);
-    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.3));
+    transform: scale(1.02);
+    filter: brightness(1.05) contrast(1.08);
 }
 
-/* 背景に淡いオーバーレイを追加 */
+/* 背景に淡いアクセント */
 .ai-effects-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 350px;
-    height: 100%;
-    background: linear-gradient(45deg, 
-        rgba(37, 99, 235, 0.02) 0%, 
-        rgba(59, 130, 246, 0.05) 50%, 
-        rgba(147, 197, 253, 0.02) 100%);
-    border-radius: 30px;
-    z-index: 0;
-}
-
-/* 人物をより自然に配置する効果 */
-.ai-effects-image::before {
     content: '';
     position: absolute;
     top: -20px;
     right: -20px;
-    width: calc(100% + 40px);
+    width: 420px;
     height: calc(100% + 40px);
-    background: radial-gradient(circle at center, 
-        rgba(255, 255, 255, 0.1) 0%, 
-        rgba(255, 255, 255, 0.05) 70%, 
-        transparent 100%);
-    border-radius: 50%;
+    background: linear-gradient(135deg, 
+        rgba(37, 99, 235, 0.03) 0%, 
+        rgba(59, 130, 246, 0.06) 50%, 
+        rgba(147, 197, 253, 0.03) 100%);
+    border-radius: 30px;
+    z-index: 0;
+}
+
+/* 画像周りの微細な装飾 */
+.ai-effects-image::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        rgba(37, 99, 235, 0.1) 0%, 
+        rgba(59, 130, 246, 0.15) 50%, 
+        rgba(147, 197, 253, 0.1) 100%);
+    border-radius: 22px;
     z-index: -1;
 }
 
@@ -1674,12 +1677,12 @@ body {
     
     .ai-effects-image {
         order: -1;
-        max-width: 280px;
+        max-width: 320px;
         margin: 0 auto;
     }
     
-    .ai-effects-image img {
-        mix-blend-mode: normal;
+    .ai-effects-image::after {
+        display: none;
     }
 
     .ai-effects-content .question-subtitle {
