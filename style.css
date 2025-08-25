@@ -989,10 +989,12 @@ body {
     right: 20px;
     background-color: var(--accent-color);
     color: var(--white);
-    padding: 4px 12px;
+    padding: 6px 16px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* 料金セクション */
@@ -1089,6 +1091,62 @@ body {
     font-size: 14px;
     color: var(--text-light);
     line-height: 1.8;
+}
+
+/* 料金注意事項 */
+.pricing-notes {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 48px;
+    border: 1px solid #e2e8f0;
+}
+
+.notes-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.notes-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.note-item h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.note-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.note-item li {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.note-item li:before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* 講師紹介セクション */
@@ -1488,5 +1546,19 @@ body {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .pricing-notes {
+        padding: 24px;
+        margin-top: 32px;
+    }
+
+    .notes-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .notes-title {
+        font-size: 18px;
     }
 }
