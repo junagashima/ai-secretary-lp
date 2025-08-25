@@ -248,6 +248,55 @@ body {
     /* 元のセクション共通スタイルを継承 */
 }
 
+/* AI効果セクション特別スタイル */
+.ai-effects-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.ai-effects-hero {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.ai-effects-content {
+    text-align: left;
+}
+
+.ai-effects-content .section-title {
+    text-align: left;
+    margin-bottom: 24px;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.ai-effects-content .question-subtitle {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.ai-effects-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.ai-effects-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ai-effects-image:hover img {
+    transform: scale(1.05);
+}
+
 .question-content {
     max-width: 1000px;
     margin: 0 auto;
@@ -1559,5 +1608,29 @@ body {
         padding: 80px 0 100px;
         background-position: center center;
         background-attachment: scroll;
+    }
+
+    .ai-effects-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .ai-effects-content {
+        text-align: center;
+    }
+
+    .ai-effects-content .section-title {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .ai-effects-content .question-subtitle {
+        text-align: center;
+    }
+
+    .ai-effects-image {
+        max-width: 350px;
+        margin: 0 auto;
     }
 }
