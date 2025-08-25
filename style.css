@@ -268,6 +268,99 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
 }
 
+/* 講師紹介セクション特別スタイル */
+.instructor {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.instructor-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.instructor-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.instructor-content .section-title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 42px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.instructor-image {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.instructor-image:hover img {
+    transform: scale(1.02);
+}
+
+/* 追尾CTA */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 16px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+    opacity: 0;
+    animation: slideInUp 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.floating-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.6);
+    text-decoration: none;
+    color: white;
+}
+
+.floating-cta.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .curriculum-hero {
     position: relative;
     display: flex;
@@ -1193,7 +1286,7 @@ body {
 
 .badge {
     position: absolute;
-    top: -12px;
+    top: 8px;
     right: 20px;
     background-color: var(--accent-color);
     color: var(--white);
@@ -1202,6 +1295,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     z-index: 10;
+    white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -1825,6 +1919,33 @@ body {
     
     .curriculum-image {
         max-width: 300px;
+    }
+    
+    .instructor-hero {
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .instructor-content .section-title {
+        font-size: 28px;
+    }
+    
+    .instructor-image {
+        max-width: 300px;
+    }
+    
+    .badge {
+        top: 4px;
+        right: 16px;
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+    
+    .floating-cta {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 14px;
     }
 
     .ai-effects-content .question-subtitle {

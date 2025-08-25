@@ -374,7 +374,14 @@
     <!-- 講師紹介セクション -->
     <section class="section instructor">
         <div class="container">
-            <h3 class="section-title">講師紹介</h3>
+            <div class="instructor-hero">
+                <div class="instructor-content">
+                    <h3 class="section-title">講師紹介</h3>
+                </div>
+                <div class="instructor-image">
+                    <img src="/images/instructor-nagashima.jpg" alt="講師 長島 淳治" />
+                </div>
+            </div>
             <div class="instructor-profile">
                 <div class="instructor-info">
                     <h4>長島 淳治</h4>
@@ -464,6 +471,33 @@
         </div>
     </footer>
 
+    <!-- 追尾CTA -->
+    <div class="floating-cta" id="floatingCta">
+        📞 無料相談を申し込む
+    </div>
+
     <script type="module" src="/main.js"></script>
+    <script>
+        // 追尾CTA表示制御
+        window.addEventListener('scroll', function() {
+            const floatingCta = document.getElementById('floatingCta');
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            
+            // スクロール位置が画面の高さを超えたら表示
+            if (scrollPosition > windowHeight * 0.5) {
+                floatingCta.classList.add('show');
+            } else {
+                floatingCta.classList.remove('show');
+            }
+        });
+        
+        // 追尾CTAクリック時の動作
+        document.getElementById('floatingCta').addEventListener('click', function(e) {
+            e.preventDefault();
+            // お問い合わせセクションにスクロール
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
