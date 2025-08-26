@@ -599,6 +599,46 @@ body {
     transform: scale(1.02);
 }
 
+/* 行動喚起の強調メッセージ */
+.call-to-action-message {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ffa500);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.call-to-action-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    animation: shine 3s ease-in-out infinite;
+}
+
+.cta-emphasis {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    line-height: 1.3;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+}
+
 .reasons-hero {
     position: relative;
     display: flex;
@@ -2045,6 +2085,16 @@ body {
     .challenge-grid,
     .benefits-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .cta-emphasis {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    
+    .call-to-action-message {
+        margin: 30px 16px 0 16px;
+        padding: 24px 16px;
     }
 
     .hero-benefits {
