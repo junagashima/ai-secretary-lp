@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'webapp-preview',
       script: 'npx',
-      args: 'vite preview --host 0.0.0.0 --port 3000',
+      args: 'wrangler pages dev dist --ip 0.0.0.0 --port 3000',
       env: {
         NODE_ENV: 'production'
       },

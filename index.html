@@ -553,8 +553,25 @@
                 
                 <!-- Formrun申し込みフォーム -->
                 <div class="contact-form-container">
+                    <h4 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">無料相談お申し込み</h4>
                     <div class="formrun-embed" data-formrun-form="@junagashima-k3UwT7jHyBUdLMsuV9wJ" data-formrun-redirect="true"></div>
+                    
+                    <!-- フォールバック：Formrunが読み込まれない場合の代替リンク -->
+                    <div id="formrun-fallback" style="text-align: center; margin-top: 20px; display: none;">
+                        <p>フォームが表示されない場合は、こちらからお申し込みください：</p>
+                        <a href="https://form.run/@junagashima-k3UwT7jHyBUdLMsuV9wJ" target="_blank" class="btn-primary large" style="display: inline-block;">お申し込みフォームを開く</a>
+                    </div>
                 </div>
+                
+                <script>
+                    // Formrunが5秒以内に読み込まれない場合、フォールバックを表示
+                    setTimeout(function() {
+                        var formrunEmbed = document.querySelector('.formrun-embed iframe');
+                        if (!formrunEmbed) {
+                            document.getElementById('formrun-fallback').style.display = 'block';
+                        }
+                    }, 5000);
+                </script>
             </div>
         </div>
     </section>
